@@ -170,7 +170,7 @@ BASIC_PARSER:
                 cp  42                      ; compare to '*'
                 jp nz , BASIC_ERROR         ; Jump if it is not an asterisk.
 
-// We found "*" in an error statement. Lets see if we extended any BASIC commands like CIRCLE *x,y,r
+; We found "*" in an error statement. Lets see if we extended any BASIC commands like CIRCLE *x,y,r
              
                 ld      hl , (ZX_CH_ADD)
                 dec     hl
@@ -665,7 +665,7 @@ BASIC_FILL:
                 call ROM_STKTOA                 ; y
                 push af
                 call ROM_STKTOA                 ; x
-                ld   d,h
+                ld   d,a
                 pop  af
                 ld   e,a
                 call sfill

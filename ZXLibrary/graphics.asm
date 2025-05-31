@@ -832,6 +832,7 @@ drawSpriteMoveXor:			push bc
 							call drawsprite
 							pop  bc
 							pop  de
+							ld   d,0
 							call drawsprite 
 							pop  bc	
 							ret
